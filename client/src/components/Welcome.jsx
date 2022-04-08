@@ -4,6 +4,7 @@ import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 
 import { TransactionContext } from "../context/TransactionContext";
+import { shortenAddress } from "../utils/shortenAddress";
 import { Loader } from ".";
 
 const companyCommonStyles =
@@ -83,7 +84,7 @@ const Welcome = () => {
                 <BsInfoCircle fontSize={17} color="#fff" />
               </div>
               <div>
-                <p className="text-white font-light text-sm">Adress</p>
+                <p className="text-white font-light text-sm">{shortenAddress(CurrentAccount)}</p>
                 <p className="text-white font-semibold text-lg mt-1">
                   Ethereum
                 </p>
